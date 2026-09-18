@@ -11,6 +11,7 @@ import { useRef } from 'react'
 
 import { GithubIcon, LinkedinIcon } from '@/components/icons/Brand'
 import { Typewriter } from '@/components/ui/Typewriter'
+import heroImage from '@/assets/Hero.png'
 import { heroRoles } from '@/data/content'
 import { profile } from '@/data/profile'
 import { useI18n } from '@/i18n/useI18n'
@@ -189,54 +190,61 @@ export function Hero() {
             </motion.span>
           ))}
 
-          <div className="relative">
+          <div className="group relative">
             <div
               aria-hidden
               className="absolute -inset-6 rounded-[2rem] bg-gradient-to-br from-sand-400/20 via-ember-500/10 to-violet-500/20 blur-3xl"
             />
             <div className="surface relative overflow-hidden rounded-3xl p-1.5 shadow-2xl shadow-black/50">
-              <div className="flex items-center gap-2 px-3 py-2.5">
-                <span className="h-2.5 w-2.5 rounded-full bg-ember-500/80" />
-                <span className="h-2.5 w-2.5 rounded-full bg-sand-300/80" />
-                <span className="h-2.5 w-2.5 rounded-full bg-emerald-400/70" />
-                <span className="ml-2 font-mono text-xs text-ink-500">
-                  developer.ts
-                </span>
+              <div className="relative overflow-hidden rounded-[1.35rem] bg-gradient-to-b from-ink-800 to-ink-950">
+                <img
+                  src={heroImage}
+                  alt={`${profile.firstName} ${profile.lastName}`}
+                  className="h-[31rem] w-full object-cover object-top transition-transform duration-500 group-hover:scale-[1.03] sm:h-[35rem]"
+                />
+                <div
+                  aria-hidden
+                  className="absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-ink-950/70 to-transparent"
+                />
+                <div className="pointer-events-none absolute right-3 bottom-3 left-3 translate-y-5 scale-[0.98] overflow-hidden rounded-2xl border border-white/10 bg-ink-950/95 opacity-0 shadow-2xl shadow-black/60 backdrop-blur-md transition-[opacity,transform] duration-300 ease-out group-hover:translate-y-0 group-hover:scale-100 group-hover:opacity-100 sm:right-5 sm:bottom-5 sm:left-5">
+                  <div className="flex items-center gap-2 border-b border-white/8 px-3 py-2.5">
+                    <span className="h-2 w-2 rounded-full bg-ember-500/80" />
+                    <span className="h-2 w-2 rounded-full bg-sand-300/80" />
+                    <span className="h-2 w-2 rounded-full bg-emerald-400/70" />
+                    <span className="ml-2 font-mono text-[0.68rem] text-ink-500">
+                      developer.ts
+                    </span>
+                  </div>
+                  <pre className="overflow-x-auto p-3 font-mono text-[0.67rem] leading-relaxed sm:p-4 sm:text-[0.73rem]">
+                    <code>
+                      <span className="text-violet-300">const</span>{' '}
+                      <span className="text-sand-300">developer</span>{' '}
+                      <span className="text-ink-400">=</span> {'{'}
+                      {'\n'}  <span className="text-sky-300">name</span>
+                      <span className="text-ink-400">:</span>{' '}
+                      <span className="text-emerald-300">'Abdelali AIT-HAMMI'</span>
+                      <span className="text-ink-400">,</span>
+                      {'\n'}  <span className="text-sky-300">role</span>
+                      <span className="text-ink-400">:</span>{' '}
+                      <span className="text-emerald-300">'Full Stack Developer'</span>
+                      <span className="text-ink-400">,</span>
+                      {'\n'}  <span className="text-sky-300">stack</span>
+                      <span className="text-ink-400">: [</span>
+                      <span className="text-emerald-300">'React'</span>
+                      <span className="text-ink-400">, </span>
+                      <span className="text-emerald-300">'Laravel'</span>
+                      <span className="text-ink-400">, </span>
+                      <span className="text-emerald-300">'MySQL'</span>
+                      <span className="text-ink-400">],</span>
+                      {'\n'}  <span className="text-sky-300">openToWork</span>
+                      <span className="text-ink-400">:</span>{' '}
+                      <span className="text-sand-300">true</span>
+                      <span className="text-ink-400">,</span>
+                      {'\n'}
+                      {'}'}</code>
+                  </pre>
+                </div>
               </div>
-              <pre className="overflow-x-auto rounded-2xl bg-ink-950/70 p-4 font-mono text-[0.78rem] leading-relaxed sm:p-5 sm:text-[0.83rem]">
-                <code>
-                  <span className="text-violet-300">const</span>{' '}
-                  <span className="text-sand-300">developer</span>{' '}
-                  <span className="text-ink-400">=</span> {'{'}
-                  {'\n'}  <span className="text-sky-300">name</span>
-                  <span className="text-ink-400">:</span>{' '}
-                  <span className="text-emerald-300">'Abdelali AIT-HAMMI'</span>
-                  <span className="text-ink-400">,</span>
-                  {'\n'}  <span className="text-sky-300">role</span>
-                  <span className="text-ink-400">:</span>{' '}
-                  <span className="text-emerald-300">'Full Stack'</span>
-                  <span className="text-ink-400">,</span>
-                  {'\n'}  <span className="text-sky-300">stack</span>
-                  <span className="text-ink-400">: [</span>
-                  <span className="text-emerald-300">'React'</span>
-                  <span className="text-ink-400">, </span>
-                  <span className="text-emerald-300">'Laravel'</span>
-                  <span className="text-ink-400">, </span>
-                  <span className="text-emerald-300">'MySQL'</span>
-                  <span className="text-ink-400">],</span>
-                  {'\n'}  <span className="text-sky-300">location</span>
-                  <span className="text-ink-400">:</span>{' '}
-                  <span className="text-emerald-300">'Merzouga, MA'</span>
-                  <span className="text-ink-400">,</span>
-                  {'\n'}  <span className="text-sky-300">openToWork</span>
-                  <span className="text-ink-400">:</span>{' '}
-                  <span className="text-sand-300">true</span>
-                  <span className="text-ink-400">,</span>
-                  {'\n'}
-                  {'}'}
-                  <span className="text-ink-400">;</span>
-                </code>
-              </pre>
             </div>
 
             <motion.div

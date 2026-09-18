@@ -4,7 +4,7 @@ export const profile = {
   firstName: 'Abdelali',
   lastName: 'AIT-HAMMI',
   initials: 'AA',
-  photo: '/avatar.svg',
+  photo: '/icon.png',
   email: 'aithammiabdelali@gmail.com',
   phone: '+212 626 78 04 06',
   phoneHref: '+212626780406',

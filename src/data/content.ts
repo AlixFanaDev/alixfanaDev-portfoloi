@@ -43,7 +43,7 @@ export const experience: ExperienceItem[] = [
       fr: 'Mars 2026',
       en: 'March 2026',
     },
-    current: true,
+    current: false,
     bullets: {
       fr: [
         'Création de sites web et de plateformes sur mesure.',
@@ -75,8 +75,7 @@ export const education: EducationItem[] = [
       en: 'Mohammed EL FASSE Specialized Institute of Applied Technology',
     },
     location: { fr: 'Errachidia, Maroc', en: 'Errachidia, Morocco' },
-    period: { fr: 'Juin 2026', en: 'June 2026' },
-    note: { fr: 'Diplôme en cours', en: 'Graduating' },
+    period: { fr: 'Juin 2026', en: 'June 2026' }
   },
   {
     degree: {
@@ -88,7 +87,7 @@ export const education: EducationItem[] = [
       en: 'Chahid My Taib Ben My Lkbir High School',
     },
     location: { fr: 'Jorf, Maroc', en: 'Jorf, Morocco' },
-    period: { fr: 'Juin 2021', en: 'June 2021' },
+    period: { fr: 'Juin 2019', en: 'June 2019' },
   },
 ]
 

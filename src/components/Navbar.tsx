@@ -47,7 +47,11 @@ export function Navbar() {
             aria-label={`${profile.firstName} ${profile.lastName} — home`}
           >
             <span className="relative grid h-9 w-9 place-items-center rounded-xl bg-gradient-to-br from-sand-300 via-ember-500 to-violet-500 text-sm font-bold text-ink-950 shadow-lg shadow-ember-500/20 transition-transform duration-300 group-hover:scale-105">
-              {profile.initials}
+              <img
+                src={profile.photo}
+                alt={`${profile.firstName} ${profile.lastName}`}
+                className="h-9 w-9 rounded-xl object-cover"
+              />
             </span>
             <span className="hidden font-display text-sm font-semibold tracking-tight text-white sm:block">
               {profile.firstName}
